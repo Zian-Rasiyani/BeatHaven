@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Platform</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="js/bootstrap.js"></script>
+    <style>
+        .carousel-inner img {
+        width: 600px; /* Set a fixed width */
+        height: 400px; /* Set a fixed height */
+        object-fit: cover; /* Ensures images maintain aspect ratio */
+    }
+        .carousel-item {
+            position: relative;
+        }
+        .artist-name {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.1);
+            color: rgb(255, 255, 255);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body class="bg-primary">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">MusicHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Artists</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Genres</a></li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search artists, songs...">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Top Artists Carousel -->
+    <div id="topArtistsCarousel" class="carousel slide p-2 mt-2 container" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active text-center">
+                <img src="kdot.jpg" class="d-block w-50 mx-auto rounded" alt="Artist 1">
+                <div class="artist-name">Kendrick Lamar</div>
+            </div>
+            <div class="carousel-item text-center">
+                <img src="pbc.jpg" class="d-block w-50 mx-auto rounded" alt="Artist 2">
+                <div class="artist-name">PlayBoi Carti</div>
+            </div>
+            <div class="carousel-item text-center">
+                <img src="hmk.webp" class="d-block w-50 mx-auto rounded" alt="Artist 3">
+                <div class="artist-name">Hanumankind</div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#topArtistsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#topArtistsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    
+    <!-- Top Songs by Genre -->
+    <div class="container mt-5">
+        <h2 class="text-center">Top Songs by Genre</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Pop</h4>
+                <ul class="list-group">
+                    <li class="list-group-item">Song 1 - Artist A</li>
+                    <li class="list-group-item">Song 2 - Artist B</li>
+                    <li class="list-group-item">Song 3 - Artist C</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h4>Hip-Hop</h4>
+                <ul class="list-group">
+                    <li class="list-group-item">Song 1 - Artist X</li>
+                    <li class="list-group-item">Song 2 - Artist Y</li>
+                    <li class="list-group-item">Song 3 - Artist Z</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h4>Rock</h4>
+                <ul class="list-group">
+                    <li class="list-group-item">Song 1 - Artist M</li>
+                    <li class="list-group-item">Song 2 - Artist N</li>
+                    <li class="list-group-item">Song 3 - Artist O</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
